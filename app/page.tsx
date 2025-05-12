@@ -20,14 +20,13 @@ export default function Home() {
       {/* Main content */}
       <main className="flex-1">
         {/* Hero section */}
-        <section className="py-6md:py-11 px-4 md:px-6">
+        <section className="py-12 md:py-16 px-4 md:px-6">
           <div className="container mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8items-center">
               <div className="space-y-3 text-center lg:text-left">
                 <div>
                   <h1 className="text-xl md:text-2xl lg:text-3xl font-bold mb-2 text-default-900 leading-tight">
-                    Store your <span className="text-primary">images</span> with
-                    ease
+                    Effortlessly upload, manage, and access your <span className="text-primary">images</span>—securely and in one place
                   </h1>
                   <p className="text-basese md:tex-glg text-default-600">
                     Simple. Secure. Fast.
@@ -63,10 +62,10 @@ export default function Home() {
               </div>
 
               <div className="flex justify-center order-first lg:order-last">
-                <div className="relative w-64 h-64 md:w-80 md:h-80">
-                  <div className="absolute inset-0 bg-primary/10 rounded-full blur-3xl"></div>
+                <div className="relative w-40 h-40 md:w-48 md:h-48">
+                  <div className="absolute inset-0 bg-primary/10 rounded-full blur-2xl"></div>
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <ImageIcon className="h-24 md:h-32 w-24 md:w-32 text-primary/70" />
+                    <ImageIcon className="h-16 md:h-20 w-16 md:w-20 text-primary/70" />
                   </div>
                 </div>
               </div>

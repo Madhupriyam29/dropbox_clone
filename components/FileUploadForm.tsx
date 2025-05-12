@@ -326,7 +326,7 @@ export default function FileUploadForm({
         onOpenChange={setFolderModalOpen}
         backdrop="blur"
         classNames={{
-          base: "border border-default-200 bg-default-5",
+          base: "border border-default-200 bg-default-50",
           header: "border-b border-default-200",
           footer: "border-t border-default-200",
         }}
