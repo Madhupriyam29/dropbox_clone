@@ -52,11 +52,12 @@ export default function SignInForm() {
         console.error("Sign-in incomplete:", result);
         setAuthError("Sign-in could not be completed. Please try again.");
       }
-    } catch (error: any) {
+    } catch (error: unknown) {
       console.error("Sign-in error:", error);
       setAuthError(
-        error.errors?.[0]?.message ||
-          "An error occurred during sign-in. Please try again."
+        error && typeof error === 'object' && 'errors' in error && Array.isArray(error.errors) && error.errors[0] && 'message' in error.errors[0]
+          ? error.errors[0].message as string
+          : "An error occurred during sign-in. Please try again."
       );
     } finally {
       setIsSubmitting(false);
@@ -153,7 +154,7 @@ export default function SignInForm() {
 
       <CardFooter className="flex justify-center py-4">
         <p className="text-sm text-default-600">
-          Don't have an account?{" "}
+          Don&apos;t have an account?{" "}
           <Link
             href="/sign-up"
             className="text-primary hover:underline font-medium"
