@@ -26,7 +26,7 @@ export default function RootLayout({
         <body
           className={`${inter.variable} antialiased bg-background text-foreground`}
         >
-          <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>{children}</Providers>
+          <Providers themeProps={{ attribute: "class", defaultTheme: "dark", themes: ["light", "dark", "blue"] }}>{children}</Providers>
         </body>
       </html>
     </ClerkProvider>
