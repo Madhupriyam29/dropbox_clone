@@ -20,21 +20,21 @@ export default function Home() {
       {/* Main content */}
       <main className="flex-1">
         {/* Hero section */}
-        <section className="py-12 md:py-20 px-4 md:px-6">
+        <section className="py-6md:py-11 px-4 md:px-6">
           <div className="container mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
-              <div className="space-y-6 text-center lg:text-left">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8items-center">
+              <div className="space-y-3 text-center lg:text-left">
                 <div>
-                  <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-default-900 leading-tight">
+                  <h1 className="text-xl md:text-2xl lg:text-3xl font-bold mb-2 text-default-900 leading-tight">
                     Store your <span className="text-primary">images</span> with
                     ease
                   </h1>
-                  <p className="text-lg md:text-xl text-default-600">
+                  <p className="text-basese md:tex-glg text-default-600">
                     Simple. Secure. Fast.
                   </p>
                 </div>
 
-                <div className="flex flex-wrap gap-4 pt-4 justify-center lg:justify-start">
+                <div className="flex flex-wrap gap-3 pt-2 justify-center lg:justify-start">
                   <SignedOut>
                     <Link href="/sign-up">
                       <Button size="lg" variant="solid" color="primary">
@@ -164,7 +164,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center gap-2 mb-4 md:mb-0">
               <CloudUpload className="h-5 w-5 text-primary" />
-              <h2 className="text-lg font-bold">Droply</h2>
+              <h2 className="text-lg font-bold">Dropbox</h2>
             </div>
             <p className="text-default-500 text-sm">
               &copy; {new Date().getFullYear()} Droply

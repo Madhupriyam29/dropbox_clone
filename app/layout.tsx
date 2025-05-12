@@ -22,11 +22,11 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider>
-      <html lang="en" className="dark">
+      <html lang="en" suppressHydrationWarning>
         <body
           className={`${inter.variable} antialiased bg-background text-foreground`}
         >
-          <Providers>{children}</Providers>
+          <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>{children}</Providers>
         </body>
       </html>
     </ClerkProvider>
