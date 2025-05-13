@@ -40,8 +40,13 @@ export default function Home() {
                       </Button>
                     </Link>
                     <Link href="/sign-in">
-                      <Button size="lg" variant="flat" color="primary">
-                        Sign In
+                      <Button 
+                        size="lg" 
+                        variant="flat" 
+                        color="primary"
+                        className="bg-blue-800 hover:bg-blue-700 text-white border-none rounded-none"
+                      >
+                        <span className="font-bold">Sign In</span>
                       </Button>
                     </Link>
                   </SignedOut>
