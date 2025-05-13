@@ -6,7 +6,6 @@ import {
   CloudUpload,
   Shield,
   Folder,
-  Image as ImageIcon,
   ArrowRight,
 } from "lucide-react";
 import Navbar from "@/components/Navbar";
@@ -67,7 +66,7 @@ export default function Home() {
                 <div className="relative w-40 h-40 md:w-48 md:h-48">
                   <div className="absolute inset-0 bg-primary/10 rounded-full blur-2xl"></div>
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <ImageIcon className="h-16 md:h-20 w-16 md:w-20 text-primary/70" />
+                    <CloudUpload className="h-16 md:h-20 w-16 md:w-20 text-primary/70" />
                   </div>
                 </div>
               </div>

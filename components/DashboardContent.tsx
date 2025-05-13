@@ -48,14 +48,14 @@ export default function DashboardContent({
         <h2 className="text-4xl font-bold text-default-900">
           Hi,{" "}
           <span className="text-primary">
-            {userName?.length > 10
-              ? `${userName?.substring(0, 10)}...`
+            {userName?.includes('@')
+              ? userName?.split('@')[0]?.split('.')[0]
               : userName?.split(" ")[0] || "there"}
           </span>
           !
         </h2>
         <p className="text-default-600 mt-2 text-lg">
-          Your images are waiting for you.
+          Files Prepared for Retrieval
         </p>
       </div>
 
