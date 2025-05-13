@@ -204,10 +204,29 @@ export default function FileUploadForm({
           color="primary"
           variant="flat"
           startContent={<FileUp className="h-4 w-4" />}
-          onClick={() => fileInputRef.current?.click()}
+          onClick={() => {
+            if (fileInputRef.current) {
+              fileInputRef.current.accept = "image/*";
+              fileInputRef.current.click();
+            }
+          }}
           className="flex-1"
         >
           Add Image
+        </Button>
+        <Button
+          color="primary"
+          variant="flat"
+          startContent={<FileUp className="h-4 w-4" />}
+          onClick={() => {
+            if (fileInputRef.current) {
+              fileInputRef.current.accept = "application/pdf";
+              fileInputRef.current.click();
+            }
+          }}
+          className="flex-1"
+        >
+          Add PDF
         </Button>
       </div>
 
@@ -216,11 +235,7 @@ export default function FileUploadForm({
         onDrop={handleDrop}
         onDragOver={handleDragOver}
         className={`border-2 border-dashed rounded-lg p-6 text-center transition-colors ${
-          error
-            ? "border-danger/30 bg-danger/5"
-            : file
-              ? "border-primary/30 bg-primary/5"
-              : "border-default-300 hover:border-primary/5"
+          error ? "border-danger/30 bg-danger/5" : file ? "border-primary/30 bg-primary/5" : "border-default-300 hover:border-primary/5"
         }`}
       >
         {!file ? (
@@ -228,7 +243,7 @@ export default function FileUploadForm({
             <FileUp className="h-12 w-12 mx-auto text-primary/70" />
             <div>
               <p className="text-default-600">
-                Drag and drop your image here, or{" "}
+                Drag and drop your file here, or{" "}
                 <button
                   type="button"
                   onClick={() => fileInputRef.current?.click()}
@@ -237,14 +252,14 @@ export default function FileUploadForm({
                   browse
                 </button>
               </p>
-              <p className="text-xs text-default-500 mt-1">Images up to 5MB</p>
+              <p className="text-xs text-default-500 mt-1">Images and PDFs up to 5MB</p>
             </div>
             <Input
               type="file"
               ref={fileInputRef}
               onChange={handleFileChange}
               className="hidden"
-              accept="image/*"
+              accept="image/*,application/pdf"
             />
           </div>
         ) : (
@@ -304,7 +319,7 @@ export default function FileUploadForm({
               className="w-full"
               isDisabled={!!error}
             >
-              {uploading ? `Uploading... ${progress}%` : "Upload Image"}
+              {uploading ? `Uploading... ${progress}%` : `Upload ${file.type.includes('pdf') ? 'PDF' : 'Image'}`}
             </Button>
           </div>
         )}
@@ -314,8 +329,8 @@ export default function FileUploadForm({
       <div className="bg-default-100/5 p-4 rounded-lg">
         <h4 className="text-sm font-medium mb-2">Tips</h4>
         <ul className="text-xs text-default-600 space-y-1">
-          <li>• Images are private and only visible to you</li>
-          <li>• Supported formats: JPG, PNG, GIF, WebP</li>
+          <li>• Files are private and only visible to you</li>
+          <li>• Supported formats: JPG, PNG, GIF, WebP, PDF</li>
           <li>• Maximum file size: 5MB</li>
         </ul>
       </div>
