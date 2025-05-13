@@ -35,8 +35,13 @@ export default function Home() {
                 <div className="flex flex-wrap gap-3 pt-2 justify-center lg:justify-start">
                   <SignedOut>
                     <Link href="/sign-up">
-                      <Button size="lg" variant="solid" color="primary">
-                        Get Started
+                      <Button 
+                        size="lg" 
+                        variant="solid" 
+                        color="primary"
+                        className="bg-blue-800 hover:bg-blue-700 text-white border-none rounded-none"
+                      >
+                        <span className="font-bold">Get Started</span>
                       </Button>
                     </Link>
                     <Link href="/sign-in">
