@@ -53,6 +53,8 @@ export default function Home() {
                         variant="solid"
                         color="primary"
                         endContent={<ArrowRight className="h-4 w-4" />}
+                        className="bg-blue-800 hover:bg-blue-700 text-white border-none rounded-none"
+
                       >
                         Go to Dashboard
                       </Button>
@@ -78,7 +80,7 @@ export default function Home() {
           <div className="container mx-auto">
             <div className="text-center mb-8 md:mb-12">
               <h2 className="text-2xl md:text-3xl font-bold mb-4 text-default-900">
-                What You Get
+              Your Advantages
               </h2>
             </div>
 
@@ -148,6 +150,8 @@ export default function Home() {
                   variant="solid"
                   color="primary"
                   endContent={<ArrowRight className="h-4 w-4" />}
+                  className="bg-blue-800 hover:bg-blue-700 text-white border-none rounded-none"
+
                 >
                   Dashboard
                 </Button>
@@ -158,14 +162,14 @@ export default function Home() {
       </main>
 
       {/* Simple footer */}
-      <footer className="bg-default-50 border-t border-default-200 py-4 md:py-6">
+      <footer className="bg-blue-900 py-4 md:py-6 text-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center gap-2 mb-4 md:mb-0">
               <CloudUpload className="h-5 w-5 text-primary" />
               <h2 className="text-lg font-bold">Dropbox</h2>
             </div>
-            <p className="text-default-500 text-sm">
+            <p className="text-gray-300 text-sm">
               &copy; {new Date().getFullYear()} Dropbox
             </p>
           </div>

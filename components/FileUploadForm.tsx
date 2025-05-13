@@ -339,14 +339,14 @@ export default function FileUploadForm({
       <Modal
         isOpen={folderModalOpen}
         onOpenChange={setFolderModalOpen}
-        backdrop="blur"
+        backdrop="opaque"
         classNames={{
-          base: "border border-default-200 bg-default-50",
-          header: "border-b border-default-200",
-          footer: "border-t border-default-200",
+          base: "border border-default-200",
+          backdrop: "bg-black/80",
+          wrapper: "z-[1000]"
         }}
       >
-        <ModalContent>
+        <ModalContent style={{ backgroundColor: "#111827", opacity: 1 }} className="!bg-opacity-100">
           <ModalHeader className="flex gap-2 items-center">
             <FolderPlus className="h-5 w-5 text-primary" />
             <span>New Folder</span>
@@ -358,8 +358,8 @@ export default function FileUploadForm({
               </p>
               <Input
                 type="text"
-                label="Folder Name"
-                placeholder="My Images"
+                label=""
+                placeholder=""
                 value={folderName}
                 onChange={(e) => setFolderName(e.target.value)}
                 autoFocus
